@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+* {
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+header {
+  height: 50vh;
+  background-image: url(/images/image-hero-mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* nav.menu {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: #fff;
+  margin-right: 3.5rem;
+} */
+
+.menu {
+  position: absolute;
+  z-index: 997px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  width: 85%;
+  height: auto;
+  top: 5.4rem;
+  transform: 
+    translate(-2rem, -2.5rem)
+    scale(0);
+  transform-origin: 100% 0%;
+  transition: all 0.35s ease-in;
+  border-radius: 8px;
+  padding: 12px 0;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 10px 0;
+  padding: 0.3rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.menu ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 8px 0;
+  padding: 0.5rem 0;
+}
+
+.menu ul li a {
+  color: #000;
+}
+
+.menu ul li a:hover {
+  font-weight: bold;
+}
+
+.menu.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+.menu-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1.6rem;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu ul li {
+  margin: 0 1rem;
+}
+
+main {
+  background-color: #fafbfb;
+}
+
+main section, .modal {
+  width: 92%;
+}
+
+main section .meter {
+  height: 14px; 
+  position: relative;
+  background: #f4f5f4;
+  border-radius: 25px;
+  margin-top: 2rem;
+}
+
+main section .meter > span {
+  height: 100%;
+  border-radius: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: block;
+}
+
+.orange > span {
+  background-color: #3cb2aa;    
+}
+
+.bordes {
+  border-radius: 10px;
+  border: 1.6px solid #dcdcdc;
+}
+
+.bg-gray {
+  background-color: #cacacb;
+}
+
+.bg-gray-2 {
+  background-color: #f4f4f4;
+}
+
+.bg-tq {
+  background-color: #3cb2aa;
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.bg-tq:hover, .bg-tq:focus {
+  background-color: #147a75;
+}
+
+.color-tq {
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}
+
+.color-gr {
+  transition: all .2s ease-in;
+  color: hsl(0, 0%, 48%);
+}
+
+.color-gr:hover, .color-gr:focus {
+  color: #147a75;
+  background-color: #f5f8f8;
+  font-weight: bolder;
+}
+
+.color-gr-2 {
+  color: #7a7b7a;
+}
+
+.section-modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  overflow-y: scroll !important;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  transition: all 0.3s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.section-modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.radio {
+  font-size: 2.25rem;
+  color: #3cb2aa;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5em;
+}
+
+.radio__input {
+  display: flex;
+}
+
+.radio__input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio__input input:checked + .radio__control {
+  background: radial-gradient(currentcolor 40%, rgba(255, 0, 0, 0) 51%);
+}
+
+.radio__control {
+  display: block;
+  width: 1.3em;
+  height: 1.3em;
+  border-radius: 50%;
+  border: 0.1em solid #cacacb;
+  transform: translateY(-0.05em);
+}
+
+input.input:focus {
+  border: 1px solid #3cb2aa;
+}
+
+.modal__title:hover {
+  color: #3cb2aa;
+  cursor: pointer;
+}
+
+#modal__selected.is-active {
+  border: 2px solid #3cb2aa;
+}
+
+.modal-complete {
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  overflow-y: scroll !important;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+
+  z-index: 999;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+}
+
+.modal-complete.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-success {
+  width: 100%;
+  background: #fff;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1022px) {
+  header {
+    height: 50vh;
+    background-image: url(/images/image-hero-desktop.jpg);
+    background-size: cover;
+  }
+
+  .menu {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    margin-right: 3.5rem;
+    background-color: transparent;
+    transform: translate(0) scale(1);
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .menu ul li {
+    padding: 0;
+    margin: 0 1rem;
+  }
+  
+  .menu ul li a {
+    color: #fff;
+  }
+
+  .menu-btn {
+    display: none;
+    visibility: hidden;
+  }
+
+  main section, .modal {
+    width: 711.5px;
+  }
+
+  .modal-success {
+    width: 540px;
+  }
+  
+  
+  
+}
+
